@@ -28,7 +28,7 @@ export default function Testimonial({
 					bgPattern ? "pattern" : ""
 				}`}
 			>
-				<header className="flex flex-row gap-4 items-center">
+				<div className="flex flex-row gap-4 items-center">
 					<div
 						className={`rounded-full p-1 ${
 							imageBorderColor == undefined
@@ -58,8 +58,8 @@ export default function Testimonial({
 							{job}
 						</span>
 					</div>
-				</header>
-				<main className="w-[20.8rem] xl:w-full">
+				</div>
+				<article className="w-[20.8rem] xl:w-full">
 					<h1
 						className={`text-2xl font-bold ${
 							bgDark ? "text-white" : "text-blue-dark_black"
@@ -67,8 +67,8 @@ export default function Testimonial({
 					>
 						{title}
 					</h1>
-				</main>
-				<footer className="w-[19rem] xl:w-full">
+				</article>
+				<div className="w-[19rem] xl:w-full">
 					<p
 						className={`text-sm opacity-70 font-thin ${
 							bgDark ? "text-white" : "text-blue-dark_black"
@@ -76,7 +76,7 @@ export default function Testimonial({
 					>
 						{children}
 					</p>
-				</footer>
+				</div>
 			</div>
 		</div>
 	);
