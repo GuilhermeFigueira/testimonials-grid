@@ -4,9 +4,10 @@ interface TestimonialProps {
 	lastName: string;
 	job: string;
 	title: string;
-	testimonial: string;
+	children: string;
 	imageBorderColor?: string;
 	bgDark: boolean;
+	bgPattern?: boolean;
 }
 
 export default function Testimonial({
@@ -15,24 +16,29 @@ export default function Testimonial({
 	lastName,
 	job,
 	title,
-	testimonial,
+	children,
 	imageBorderColor,
 	bgDark,
+	bgPattern,
 }: TestimonialProps) {
 	return (
-		<div className={`flex flex-col bg-${color} rounded-lg `}>
-			<div>
-				<header className="flex flex-row gap-4">
+		<div className={`${color} rounded-lg w-fit `}>
+			<div
+				className={`flex flex-col gap-4 py-8 mx-8 ${
+					bgPattern ? "pattern" : ""
+				}`}
+			>
+				<header className="flex flex-row gap-4 items-center">
 					<div
-						className={`rounded-full p-2 ${
+						className={`rounded-full p-1 ${
 							imageBorderColor == undefined
 								? ""
-								: `bg-${imageBorderColor} `
+								: `${imageBorderColor} saturate-150`
 						}`}
 					>
 						<img
-							className="rounded-full"
-							src={`/image-${name}`}
+							className="rounded-full saturate-50 w-10"
+							src={`/image-${name.toLowerCase()}.jpg`}
 							alt={`${name} profile picture`}
 						/>
 					</div>
@@ -53,7 +59,7 @@ export default function Testimonial({
 						</span>
 					</div>
 				</header>
-				<main className="w-[21.3rem]">
+				<main className="w-[20.8rem]">
 					<h1
 						className={`text-2xl font-bold ${
 							bgDark ? "text-white" : "text-blue-dark_black"
@@ -62,13 +68,13 @@ export default function Testimonial({
 						{title}
 					</h1>
 				</main>
-				<footer className="w-[21.3rem]">
+				<footer className="w-[19rem]">
 					<p
-						className={`text-sm opacity-70 ${
+						className={`text-sm opacity-70 font-thin ${
 							bgDark ? "text-white" : "text-blue-dark_black"
 						}`}
 					>
-						{testimonial}
+						{children}
 					</p>
 				</footer>
 			</div>

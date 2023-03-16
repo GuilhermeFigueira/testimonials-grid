@@ -15,6 +15,9 @@ module.exports = {
 				},
 				gray: "hsl(0, 0%, 81%)",
 			},
+			backgroundImage: {
+				pattern: "url(/bg-pattern-quotation.svg)",
+			},
 		},
 	},
 	plugins: [],

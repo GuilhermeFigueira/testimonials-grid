@@ -5,3 +5,18 @@
 	-moz-osx-font-smoothing: grayscale;
 	-webkit-font-smoothing: subpixel-antialiased;
 }
+.violet {
+	@apply bg-violet;
+}
+.pattern {
+	@apply bg-pattern bg-no-repeat bg-right-top;
+}
+.blue-dark_gray {
+	@apply bg-blue-dark_gray;
+}
+.white {
+	@apply bg-white;
+}
+.blue-dark_black {
+	@apply bg-blue-dark_black;
+}
