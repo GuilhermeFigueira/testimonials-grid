@@ -20,3 +20,11 @@
 .blue-dark_black {
 	@apply bg-blue-dark_black;
 }
+.grid_testimonial {
+	grid-template-columns: 20rem 20rem 20rem 20rem;
+	grid-template-rows: 20rem 20rem;
+	@apply xl:grid xl:gap-4 xl:h-screen xl:justify-center xl:py-0 xl:justify-items-center xl:content-center;
+}
+.grid_testimonial > div {
+	@apply xl:h-full xl:w-full;
+}

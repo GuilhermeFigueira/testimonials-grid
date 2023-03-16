@@ -22,7 +22,7 @@ export default function Testimonial({
 	bgPattern,
 }: TestimonialProps) {
 	return (
-		<div className={`${color} rounded-lg w-fit `}>
+		<div className={`${color} rounded-lg w-fit xl:w-full xl:h-full`}>
 			<div
 				className={`flex flex-col gap-4 py-8 mx-8 ${
 					bgPattern ? "pattern" : ""
@@ -59,7 +59,7 @@ export default function Testimonial({
 						</span>
 					</div>
 				</header>
-				<main className="w-[20.8rem]">
+				<main className="w-[20.8rem] xl:w-full">
 					<h1
 						className={`text-2xl font-bold ${
 							bgDark ? "text-white" : "text-blue-dark_black"
@@ -68,7 +68,7 @@ export default function Testimonial({
 						{title}
 					</h1>
 				</main>
-				<footer className="w-[19rem]">
+				<footer className="w-[19rem] xl:w-full">
 					<p
 						className={`text-sm opacity-70 font-thin ${
 							bgDark ? "text-white" : "text-blue-dark_black"
